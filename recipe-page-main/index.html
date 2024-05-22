@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Recipe page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      background-color: hsl(30, 54%, 90%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-family: "Outfit", sans-serif;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .card {
+      max-width: 600px;
+      background-color: hsl(0, 0%, 100%);
+
+      border-radius: 20px;
+    }
+
+    .card_content {
+      padding: 30px;
+    }
+
+    .card_title {
+      font-family: "Young Serif", serif;
+      font-weight: 400;
+    }
+
+    .card_subtitle {
+      font-family: "Young Serif", serif;
+      font-weight: 400;
+      color: hsl(14, 45%, 36%);
+    }
+
+    img {
+      width: 600px;
+      border-radius: 10px;
+    }
+
+    .card_preparation {
+      padding: 5px;
+      padding-left: 25px;
+      background-color: hsl(330, 100%, 98%);
+    }
+
+    .card_preparation_title {
+      color: hsl(332, 51%, 32%);
+    }
+
+    .card_description {
+      line-height: 1.5em;
+    }
+
+    .card_preparation_list {
+      line-height: 2em;
+    }
+
+    .card_preparation_list li {
+      margin-left: -15px;
+    }
+
+    ul.list {
+      line-height: 2em;
+      margin-bottom: 30px;
+    }
+
+    ul.list li {
+      margin-left: -17px
+    }
+
+    ol {
+      line-height: 1.5em;
+      margin-bottom: 30px;
+
+    }
+
+    ol li {
+      margin-bottom: 8px;
+      margin-left: -17px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1.5em;
+      /* separar espacios */
+    }
+
+    li::marker {
+      color: hsl(14, 45%, 36%);
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    li::before {
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.2em;
+
+    }
+
+
+    hr {
+      border-top: 1px solid hsl(30, 18%, 87%);
+    }
+
+    .card_table {
+      table-layout: fixed;
+      text-align: left;
+      min-width: 100%;
+      border-collapse: collapse;
+    }
+
+    .card_table thead {
+      margin-bottom: 8px;
+    }
+
+    .card_table td.card_table_text {
+      color: hsl(14, 45%, 36%);
+      font-weight: bold;
+    }
+
+    .card_table_tbody th:nth-child(1),
+    td:nth-child(2) {
+      border-bottom: 1px solid hsl(30, 18%, 87%);
+    }
+
+    .card_table_tbody th:nth-child(1) {
+      padding-left: 25px;
+    }
+
+    .card_table_tbody tr {
+      margin-left: 8px;
+    }
+
+    .card_table_tbody td {
+      line-height: 3em;
+    }
+
+    .card_table_tbody th {
+      font-weight: normal;
+    }
+
+    @media (max-width: 1440px) {}
+
+    @media (max-width: 375px) {
+
+      body {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .card {
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="card_img">
+      <img src="assets/images/image-omelette.jpeg" alt="imagen de omelette">
+    </div>
+
+    <div class="card_content">
+      <h1 class="card_title">Simple Omelette Recipe</h1>
+
+      <p class="card_description">
+        An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
+        to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+      </p>
+
+      <div class="card_preparation">
+        <h3 class="card_preparation_title">Preparation time</h3>
+        <ul class="card_preparation_list">
+          <li><b>Total:</b> Approximately 10 minutes</li>
+          <li><b>Preparation:</b> 5 minutes</li>
+          <li><b>Cooking:</b> 5 minutes</li>
+        </ul>
+      </div>
+
+      <h2 class="card_subtitle">Ingredients</h2>
+
+      <ul class="list">
+        <li>2-3 large eggs</li>
+        <li>Salt, to taste</li>
+        <li>Pepper, to taste</li>
+        <li>1 tablespoon of butter or oil</li>
+        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      </ul>
+
+      <hr />
+
+      <h2 class="card_subtitle">Instructions</h2>
+
+      <ol>
+        <li><b>Beat the eggs:</b> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed.
+          You can add a tablespoon of water or milk for a fluffier texture.</li>
+        <li><b>Heat the pan:</b> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+        <li><b>Cook the omelette:</b> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure
+          the eggs evenly coat the surface.</li>
+        <li><b>Add fillings (optional):</b> When the eggs begin to set at the edges but are still slightly runny in the
+          middle, sprinkle your chosen fillings over one half of the omelette.</li>
+        <li><b>Fold and serve:</b> As the omelette continues to cook, carefully lift one edge and fold it over the
+          fillings. Let it cook for another minute, then slide it onto a plate.</li>
+        <li><b>Enjoy:</b> Serve hot, with additional salt and pepper if needed.</li>
+      </ol>
+
+      <hr />
+
+      <h2 class="card_subtitle">Nutrition</h2>
+
+      <table class="card_table">
+        <thead>
+          <p>The table below shows nutritional values per serving without the additional fillings.</p>
+        </thead>
+        <tbody class="card_table_tbody">
+          <tr>
+            <th scope="row">Calories</th>
+            <td class="card_table_text">277kcal</td>
+          </tr>
+          <tr>
+            <th scope="row">Carbs</th>
+            <td class="card_table_text">0g</td>
+          </tr>
+          <tr>
+            <th scope="row">Protein</th>
+            <td class="card_table_text">20g</td>
+          </tr>
+          <tr>
+            <th scope="row">Fat</th>
+            <td class="card_table_text">22g</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Jonathan</a>.
+  </div>
+</body>
+
+</html>
